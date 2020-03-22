@@ -1,0 +1,52 @@
+.navigation
+  @include flex
+  @include fullscreen
+
+  &-grid
+    @include grid(250px 250px / 250px 250px, 20px, true)
+    position: relative
+
+    &-block
+      width: 250px
+      height: 250px
+      z-index: 1
+      &-column-bg-left, &-column-bg-right
+        position: absolute
+        height: 100%
+        top: 0
+        left: 0
+        transform: scaleX(0)
+      &-column-bg-left
+        z-index: -1
+      &-column-bg-right
+        z-index: -2
+    &-title
+      position: absolute
+      z-index: 1
+       
+  &-coding
+    top: 10px
+    left: 10px
+
+.title
+  position: relative
+  &-coding
+    top: 10px
+    left: 10px
+  &-design
+    top: 10px
+    right: 10px
+  &-finance
+    bottom: 10px
+    left: 10px
+  &-ventures
+    bottom: 10px
+    right: 10px
+
+@each $category, $value in $categories
+  .block-#{$category}
+    background: $value
+  .navigation-grid-block-column-bg-left-#{$category}
+    background: scale-color($value, $lightness: -10%, $saturation: +10%)
+  .navigation-grid-block-column-bg-right-#{$category}
+    background: scale-color($value, $lightness: +10%, $saturation: -10%)

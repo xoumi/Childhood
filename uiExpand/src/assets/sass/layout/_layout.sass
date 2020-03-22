@@ -1,0 +1,14 @@
+@mixin fullscreen()
+  height: 100vh
+  width: 100vw
+
+@mixin flex()
+  display: flex
+
+@mixin grid($template, $gap: 0, $center: false)
+  display: grid
+  grid-template: inspect($template)
+  grid-gap: $gap
+  @if $center
+    margin: auto
+

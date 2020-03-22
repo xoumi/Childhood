@@ -1,0 +1,41 @@
+$gap: 2px
+.root
+  height: 100vh
+  overflow: hidden
+  background: $bg-dark
+  display: grid
+  grid-template-columns: repeat(4, 1fr $gap) 1fr
+  grid-template-rows: 100px 2px 1fr
+  grid-template-areas: "h  h  h  h  h  h  h  h  h" "hl hl hl hl hl hl hl hl hl" "c1  l1 c2  l2 c3  l3 c4  l4 c5"
+
+  &-header, &-h-separator
+    grid-column: 1 / -1
+
+
+  &-header
+    display: flex
+    flex-direction: column
+    height: 100%
+    width: 100%
+    justify-content: center
+    align-items: center
+
+  &-input
+    position: fixed
+  &-searchDisplay
+    height: 1em
+  
+  &-separator
+    background: white
+    opacity: .1
+  &-h-separator
+    background: white
+    opacity: .7
+
+  &-separator
+    transform: scaleY(1.2)
+    transform-origin: bottom
+  
+@for $i from 1 through 4
+  .l#{$i}
+    grid-area: l + $i

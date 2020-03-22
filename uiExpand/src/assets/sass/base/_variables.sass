@@ -1,0 +1,21 @@
+$color1: hsla(268%, 55%, 82%, 1)
+$color2: hsla(214%, 79%, 85%, 1)
+$color3: hsla(110%, 50%, 86%, 1)
+$color4: hsla(9%, 77%, 81%, 1)
+
+$venture: $color4
+$coding: $color2
+$finance: $color3
+$design: $color1
+$categories: ( 'ventures': $venture, 'coding': $coding, 'design': $design, 'finance': $finance) 
+
+@mixin textBar
+  content: ' '
+  position: absolute
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+
+.ventures
+  background: $venture

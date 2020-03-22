@@ -1,0 +1,45 @@
+.images {
+    position: relative;
+    height: 300px;
+    margin: auto;
+}
+
+.images img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    opacity: 0;
+}
+
+.mainText { animation: mainText 2s ease forwards; }
+.center { z-index: 2; animation: center 2s ease forwards; }
+.innerTri{ z-index: 0; animation: greenElements 2s ease 1s forwards; }
+.greenText { animation: greenElements 1s ease forwards; }
+.lower { z-index: 1; animation: lower 1s ease 1.3s forwards; }
+.upper { z-index: 2; animation: upper 1s ease 1.2s forwards; }
+.middle { z-index: 1; animation: middle 1s ease 1.1s forwards; }
+
+@keyframes mainText {
+    from { opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes center {
+    from { transform: translateX(-10px); opacity: 0; }
+    to { opacity: 1; transform: translateX(0px); }
+}
+@keyframes greenElements {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes lower {
+    from { opacity: 0; transform: translate(-70px, -50px); }
+    to { opacity: 1; transform: translate(0px, 0px); }
+}
+@keyframes upper {
+    from {opacity: 0; transform: translate(-20px, 50px); }
+    to { opacity: 1; transform: translate(0px, 0px); }
+@keyframes middle {
+    from { opacity: 0; transform: translate(-50px, 50px); }
+    to { opacity: 1; transform: translate(0px, 0px); }
+}

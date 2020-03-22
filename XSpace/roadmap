@@ -1,0 +1,11 @@
+9th Feb, Day 1: Ideas, Figma wireframe for landing page, Vue structuring
+
+10th Feb, Day 2: GSAP, Animating the {Logo, Header}, ParallaxJS, Routing basics
+
+11th Feb, Day 3: Vue <transition>, figma wireframe for Thoughts, Thoughts page timeline iterations[before-after-textInMiddle, single line attempts (all failed), extend the T, use svg], implement parllax, simplebar, fix their inserted css
+
+12th - 19th Feb, Break: Exams, KiiTFest, Life.
+
+20th Feb, Day 4: Back at it. Study up on vuex, nuxtjs, works page prototyping
+
+21th Feb, Day 5: Explore SVG GaussianBlur-Colormatrix, apply on timeline

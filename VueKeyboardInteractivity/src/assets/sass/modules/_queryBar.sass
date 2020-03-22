@@ -1,0 +1,42 @@
+.qb
+  margin-bottom: 20px
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &-search-icon
+    position: absolute
+
+  &-inputContainer
+    position: absolute
+    height: 27px
+    width: max-content
+    color: white
+
+  &-text:focus
+      outline: none
+
+  &-underline
+    background: white
+    height: 3px
+    top: 32px
+    border-radius: 20px
+    position: absolute
+
+
+
+//Vue Transition Classes
+.hideTitle-move
+  position: absolute
+  transition: all .4s
+
+.fade-up-leave-to, .fade-up-enter
+  opacity: 0
+  transform: translateY(-20px)
+.fade-up-leave, .fade-up-enter-to
+  opacity: 1
+  transform: translateY(0px)
+
+.fade-up-enter-active, .fade-up-leave-active
+  transition: all .4s

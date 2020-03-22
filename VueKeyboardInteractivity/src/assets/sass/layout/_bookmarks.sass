@@ -1,0 +1,39 @@
+.bkms
+  grid-area: c1
+  display: flex
+  flex-direction: column
+  position: relative
+  &-title
+    padding: 20px 10px
+    margin: 0 auto
+    color: white
+
+  &-list
+    display: flex
+    flex-direction: column
+    position: relative
+    &-item
+      color: white
+      padding: 15px 10px
+    &-title
+      font-size: 15px
+    &-subTitle
+      margin-top: 2px
+      opacity: .4
+      font-size: 10px
+    &-select
+      background: #49586A
+      height: 58px
+      width: 100%
+      position: absolute
+      z-index: -1
+
+.fade-leave-to, .fade-enter
+  opacity: 0
+.fade-leave, .fade-enter-to
+  opacity: 1
+
+.fade-enter-active
+  transition: all .5s .5s
+.fade-leave-active
+  transition: all .4s

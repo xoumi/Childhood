@@ -1,0 +1,28 @@
+$dasharray: 68px
+.search-icon
+  path
+    stroke-dasharray: $dasharray
+    stroke-dashoffset: 0
+
+.draw-enter-active, .draw-leave-active
+  transition: all .8s
+  path
+    transition: stroke-dashoffset .8s
+
+.draw-leave-to
+  transform: scale(0)
+  opacity: 0
+  path
+    stroke-dashoffset: -$dasharray 
+
+.draw-enter
+  opacity: 0
+  transform: translateY(20px)
+  path
+    stroke-dashoffset: -$dasharray 
+
+.draw-enter-to
+  transform: translateY(0)
+  opacity: 1
+  path
+    stroke-dashoffset: 0 
